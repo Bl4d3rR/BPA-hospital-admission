@@ -1,0 +1,46 @@
+{
+  "components": [
+    {
+      "text": "# Registration Form",
+      "type": "text",
+      "id": "Field_1yzskdv"
+    },
+    {
+      "label": "Known Allergies",
+      "type": "textfield",
+      "id": "Field_18n1up6",
+      "key": "field_065w8y7"
+    },
+    {
+      "label": "Pre-existing Conditions",
+      "type": "textfield",
+      "id": "Field_0zze3xd",
+      "key": "field_1yy1730"
+    },
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "label": "Pregnant?",
+      "type": "radio",
+      "id": "Field_0kglo52",
+      "key": "pregnant"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_c771ca38-d3f8-4cad-a9e1-1a5b879c2a25",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

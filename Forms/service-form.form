@@ -1,0 +1,87 @@
+{
+  "components": [
+    {
+      "text": "# Service Form",
+      "type": "text",
+      "id": "Field_1ywbb0a"
+    },
+    {
+      "values": [
+        {
+          "label": "Single Bedroom",
+          "value": "single"
+        },
+        {
+          "label": "Double Bedroom",
+          "value": "double"
+        },
+        {
+          "label": "Quarantine Room",
+          "value": "quarantine"
+        }
+      ],
+      "label": "Room Type",
+      "type": "select",
+      "id": "Field_1wxurh4",
+      "key": "room_type"
+    },
+    {
+      "values": [
+        {
+          "label": "Neurology",
+          "value": "value"
+        },
+        {
+          "label": "Neonatal",
+          "value": "value2"
+        },
+        {
+          "label": "Cardiology",
+          "value": "value3"
+        },
+        {
+          "label": "Oncology",
+          "value": "value4"
+        },
+        {
+          "label": "Paramedical",
+          "value": "value5"
+        }
+      ],
+      "label": "Department",
+      "type": "select",
+      "id": "Field_03c4s4c",
+      "key": "field_1qtryx0"
+    },
+    {
+      "label": "Hospital Ward",
+      "type": "number",
+      "id": "Field_0kttc5s",
+      "key": "hospital_ward",
+      "validate": {
+        "min": 0,
+        "max": 10
+      }
+    },
+    {
+      "label": "Stay Duration (Days)",
+      "type": "number",
+      "id": "Field_0sut58f",
+      "key": "stay_duration",
+      "validate": {
+        "min": 1,
+        "required": true,
+        "max": 30
+      }
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_1bf01bfe-75bf-4d63-a3bd-577ca6e7c721",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

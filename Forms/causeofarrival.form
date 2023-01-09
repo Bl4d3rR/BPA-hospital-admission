@@ -1,0 +1,68 @@
+{
+  "components": [
+    {
+      "text": "# Patient Form",
+      "type": "text",
+      "id": "Field_1xwr4o9"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "id": "Field_09rjj3t",
+      "key": "name"
+    },
+    {
+      "values": [
+        {
+          "label": "Cardiac arrest",
+          "value": "cardiac arrest"
+        },
+        {
+          "label": "Head trauma",
+          "value": "head trauma"
+        },
+        {
+          "label": "Closed fractures",
+          "value": "closed fractures"
+        },
+        {
+          "label": "Dead",
+          "value": "dead"
+        },
+        {
+          "label": "Shock",
+          "value": "shock"
+        },
+        {
+          "label": "Imminent organ failure",
+          "value": "imminent organ failure"
+        },
+        {
+          "label": "Gunshot vitals stable",
+          "value": "gunshot vitals stable"
+        },
+        {
+          "label": "Respiratory distress",
+          "value": "respiratory distress"
+        },
+        {
+          "label": "Lethal radiation dose",
+          "value": "lethal radiation dose"
+        }
+      ],
+      "label": "Select",
+      "type": "select",
+      "id": "Field_1owp00m",
+      "key": "patient_condition"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_f06ba103-0a24-4a25-8e1b-8dbcc99de628",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

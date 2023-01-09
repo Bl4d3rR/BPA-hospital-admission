@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Web Modeler" exporterVersion="b82f70e" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0" camunda:diagramRelationId="7a238e56-b410-4bcb-a0e6-870aed06502a">
+  <bpmn:collaboration id="Collaboration_0nwcqc2">
+    <bpmn:participant id="Participant_1ay0i75" name="hospital" processRef="Process_Check_Insurance" />
+  </bpmn:collaboration>
+  <bpmn:process id="Process_Check_Insurance" name="Check Insurance" isExecutable="true">
+    <bpmn:extensionElements>
+      <zeebe:userTaskForm id="userTaskForm_2kn8usu">{
+  "components": [
+    {
+      "values": [
+        {
+          "label": "Yes",
+          "value": "true"
+        },
+        {
+          "label": "No",
+          "value": "false"
+        }
+      ],
+      "label": "Insurance Card?",
+      "type": "select",
+      "id": "Field_0ngtf97",
+      "key": "insurance_card"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_263b2aad-2e5a-4e16-8e4c-06a9742d4a42",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="UserTaskForm_2hdrs27">{
+  "components": [
+    {
+      "text": "# Insurance Form",
+      "type": "text",
+      "id": "Field_1c2hfz9"
+    },
+    {
+      "label": "First name",
+      "type": "textfield",
+      "id": "Field_1togg8u",
+      "key": "field_05rxme0"
+    },
+    {
+      "label": "Last name",
+      "type": "textfield",
+      "id": "Field_0mhx2uo",
+      "key": "field_0t93lrm"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "label": "Diverse",
+          "value": "diverse"
+        }
+      ],
+      "label": "Sex",
+      "type": "radio",
+      "id": "Field_118h7kx",
+      "key": "field_0oe4drk"
+    },
+    {
+      "label": "Date of birth",
+      "type": "textfield",
+      "id": "Field_0o818qg",
+      "key": "field_1nljm1l",
+      "properties": {},
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Street/House number",
+      "type": "textfield",
+      "id": "Field_1ko3jh2",
+      "key": "field_1sbq0td"
+    },
+    {
+      "label": "Town/City",
+      "type": "textfield",
+      "id": "Field_00lgxeh",
+      "key": "field_19nrda8"
+    },
+    {
+      "label": "Postcode",
+      "type": "textfield",
+      "id": "Field_1a0nt59",
+      "key": "field_1vul3u8"
+    },
+    {
+      "label": "Telephone number",
+      "type": "textfield",
+      "id": "Field_00tuoqx",
+      "key": "field_0rujvd5"
+    },
+    {
+      "label": "Email adress",
+      "type": "textfield",
+      "id": "Field_0jibzca",
+      "key": "field_0lyw0y9"
+    },
+    {
+      "label": "Health Insurance name",
+      "type": "textfield",
+      "id": "Field_03r27xp",
+      "key": "field_1kqobs7"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "insurance_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3c6ceah">{
+  "components": [
+    {
+      "text": "# Insurance Form",
+      "type": "text",
+      "id": "Field_1c2hfz9"
+    },
+    {
+      "label": "First name",
+      "type": "textfield",
+      "id": "Field_1togg8u",
+      "key": "field_05rxme0"
+    },
+    {
+      "label": "Last name",
+      "type": "textfield",
+      "id": "Field_0mhx2uo",
+      "key": "field_0t93lrm"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "label": "Diverse",
+          "value": "diverse"
+        }
+      ],
+      "label": "Sex",
+      "type": "radio",
+      "id": "Field_118h7kx",
+      "key": "field_0oe4drk"
+    },
+    {
+      "label": "Date of birth",
+      "type": "textfield",
+      "id": "Field_0o818qg",
+      "key": "field_1nljm1l",
+      "properties": {},
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Street/House number",
+      "type": "textfield",
+      "id": "Field_1ko3jh2",
+      "key": "field_1sbq0td"
+    },
+    {
+      "label": "Town/City",
+      "type": "textfield",
+      "id": "Field_00lgxeh",
+      "key": "field_19nrda8"
+    },
+    {
+      "label": "Postcode",
+      "type": "textfield",
+      "id": "Field_1a0nt59",
+      "key": "field_1vul3u8"
+    },
+    {
+      "label": "Telephone number",
+      "type": "textfield",
+      "id": "Field_00tuoqx",
+      "key": "field_0rujvd5"
+    },
+    {
+      "label": "Email adress",
+      "type": "textfield",
+      "id": "Field_0jibzca",
+      "key": "field_0lyw0y9"
+    },
+    {
+      "label": "Health Insurance name",
+      "type": "textfield",
+      "id": "Field_03r27xp",
+      "key": "field_1kqobs7"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "insurance_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}</zeebe:userTaskForm>
+      <zeebe:userTaskForm id="userTaskForm_3e74ai0">{
+  "components": [
+    {
+      "text": "# Insurance Form",
+      "type": "text",
+      "id": "Field_1c2hfz9"
+    },
+    {
+      "label": "First name",
+      "type": "textfield",
+      "id": "Field_1togg8u",
+      "key": "field_05rxme0"
+    },
+    {
+      "label": "Last name",
+      "type": "textfield",
+      "id": "Field_0mhx2uo",
+      "key": "field_0t93lrm"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "label": "Diverse",
+          "value": "diverse"
+        }
+      ],
+      "label": "Sex",
+      "type": "radio",
+      "id": "Field_118h7kx",
+      "key": "field_0oe4drk"
+    },
+    {
+      "label": "Date of birth",
+      "type": "textfield",
+      "id": "Field_0o818qg",
+      "key": "field_1nljm1l",
+      "properties": {},
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Street/House number",
+      "type": "textfield",
+      "id": "Field_1ko3jh2",
+      "key": "field_1sbq0td"
+    },
+    {
+      "label": "Town/City",
+      "type": "textfield",
+      "id": "Field_00lgxeh",
+      "key": "field_19nrda8"
+    },
+    {
+      "label": "Postcode",
+      "type": "textfield",
+      "id": "Field_1a0nt59",
+      "key": "field_1vul3u8"
+    },
+    {
+      "label": "Telephone number",
+      "type": "textfield",
+      "id": "Field_00tuoqx",
+      "key": "field_0rujvd5"
+    },
+    {
+      "label": "Email adress",
+      "type": "textfield",
+      "id": "Field_0jibzca",
+      "key": "field_0lyw0y9"
+    },
+    {
+      "label": "Health Insurance name",
+      "type": "textfield",
+      "id": "Field_03r27xp",
+      "key": "field_1kqobs7"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "insurance_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}</zeebe:userTaskForm>
+    </bpmn:extensionElements>
+    <bpmn:laneSet id="LaneSet_00isz2m">
+      <bpmn:lane id="Lane_1j0e78b" name="emergency addministratice personal">
+        <bpmn:flowNodeRef>Activity_1nv8h61</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Activity_18wto2o</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Event_0sujhss</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1lv4j6b</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway_1hms8mu</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_19psyhv" name="Emergency Paramedic">
+        <bpmn:flowNodeRef>Activity_1i2rngr</bpmn:flowNodeRef>
+        <bpmn:childLaneSet id="LaneSet_0jz1j57" />
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0xiovtw" name="patient">
+        <bpmn:flowNodeRef>Activity_07lz597</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:userTask id="Activity_1nv8h61" name="check insurance card">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_2kn8usu" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_07qazih</bpmn:incoming>
+      <bpmn:outgoing>Flow_1fi8pkn</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_18wto2o" name="read in insurance card">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_3e74ai0" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0k84gbg</bpmn:incoming>
+      <bpmn:outgoing>Flow_0qeaxj7</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_0reqldm">
+        <bpmn:targetRef>DataStoreReference_14ltupe</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_0sujhss" name="patient data">
+      <bpmn:incoming>Flow_0yydo3f</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:exclusiveGateway id="Gateway_1lv4j6b">
+      <bpmn:incoming>Flow_0qeaxj7</bpmn:incoming>
+      <bpmn:incoming>Flow_1gdojig</bpmn:incoming>
+      <bpmn:incoming>Flow_18h1k9n</bpmn:incoming>
+      <bpmn:outgoing>Flow_0yydo3f</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:exclusiveGateway id="Gateway_1hms8mu" name="insurance card ?">
+      <bpmn:incoming>Flow_1fi8pkn</bpmn:incoming>
+      <bpmn:outgoing>Flow_0k84gbg</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1qiclew</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0uvwq7b</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:startEvent id="StartEvent_1" name="insurance info requested">
+      <bpmn:outgoing>Flow_07qazih</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_07qazih" sourceRef="StartEvent_1" targetRef="Activity_1nv8h61" />
+    <bpmn:sequenceFlow id="Flow_1fi8pkn" sourceRef="Activity_1nv8h61" targetRef="Gateway_1hms8mu" />
+    <bpmn:sequenceFlow id="Flow_0k84gbg" name="yes" sourceRef="Gateway_1hms8mu" targetRef="Activity_18wto2o">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=insurance_card = "true"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0qeaxj7" sourceRef="Activity_18wto2o" targetRef="Gateway_1lv4j6b" />
+    <bpmn:sequenceFlow id="Flow_0yydo3f" sourceRef="Gateway_1lv4j6b" targetRef="Event_0sujhss" />
+    <bpmn:userTask id="Activity_1i2rngr" name="fill out insurance form">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:userTaskForm_3c6ceah" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1qiclew</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gdojig</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_0wjfepc">
+        <bpmn:targetRef>DataStoreReference_14ltupe</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:userTask>
+    <bpmn:userTask id="Activity_07lz597" name="fill out insurance form">
+      <bpmn:extensionElements>
+        <zeebe:formDefinition formKey="camunda-forms:bpmn:UserTaskForm_2hdrs27" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0uvwq7b</bpmn:incoming>
+      <bpmn:outgoing>Flow_18h1k9n</bpmn:outgoing>
+      <bpmn:dataOutputAssociation id="DataOutputAssociation_0a3mt4w">
+        <bpmn:targetRef>DataStoreReference_14ltupe</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1gdojig" sourceRef="Activity_1i2rngr" targetRef="Gateway_1lv4j6b" />
+    <bpmn:sequenceFlow id="Flow_18h1k9n" sourceRef="Activity_07lz597" targetRef="Gateway_1lv4j6b" />
+    <bpmn:sequenceFlow id="Flow_1qiclew" sourceRef="Gateway_1hms8mu" targetRef="Activity_1i2rngr">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=case = "3"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_0uvwq7b" name="no" sourceRef="Gateway_1hms8mu" targetRef="Activity_07lz597">
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">=case = "1" or case = "2"</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:dataStoreReference id="DataStoreReference_14ltupe" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0nwcqc2">
+      <bpmndi:BPMNShape id="Participant_1ay0i75_di" bpmnElement="Participant_1ay0i75" isHorizontal="true">
+        <dc:Bounds x="120" y="80" width="870" height="620" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0xiovtw_di" bpmnElement="Lane_0xiovtw" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="840" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_19psyhv_di" bpmnElement="Lane_19psyhv" isHorizontal="true">
+        <dc:Bounds x="150" y="200" width="840" height="120" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1j0e78b_di" bpmnElement="Lane_1j0e78b" isHorizontal="true">
+        <dc:Bounds x="150" y="320" width="840" height="380" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0wrl897_di" bpmnElement="Activity_1nv8h61">
+        <dc:Bounds x="330" y="460" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jtrdd1_di" bpmnElement="Activity_18wto2o">
+        <dc:Bounds x="590" y="600" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0sujhss_di" bpmnElement="Event_0sujhss">
+        <dc:Bounds x="892" y="482" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="881" y="525" width="58" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1lv4j6b_di" bpmnElement="Gateway_1lv4j6b" isMarkerVisible="true">
+        <dc:Bounds x="775" y="475" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1hms8mu_di" bpmnElement="Gateway_1hms8mu" isMarkerVisible="true">
+        <dc:Bounds x="475" y="475" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="539" y="490" width="82" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="232" y="482" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="216" y="525" width="69" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09sev44_di" bpmnElement="Activity_1i2rngr">
+        <dc:Bounds x="590" y="220" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_021mvzb" bpmnElement="Activity_07lz597">
+        <dc:Bounds x="590" y="100" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataStoreReference_14ltupe_di" bpmnElement="DataStoreReference_14ltupe">
+        <dc:Bounds x="705" y="355" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_07qazih_di" bpmnElement="Flow_07qazih">
+        <di:waypoint x="268" y="500" />
+        <di:waypoint x="330" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1fi8pkn_di" bpmnElement="Flow_1fi8pkn">
+        <di:waypoint x="430" y="500" />
+        <di:waypoint x="475" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0k84gbg_di" bpmnElement="Flow_0k84gbg">
+        <di:waypoint x="500" y="525" />
+        <di:waypoint x="500" y="640" />
+        <di:waypoint x="590" y="640" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="507" y="532" width="17" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0qeaxj7_di" bpmnElement="Flow_0qeaxj7">
+        <di:waypoint x="690" y="640" />
+        <di:waypoint x="800" y="640" />
+        <di:waypoint x="800" y="525" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0yydo3f_di" bpmnElement="Flow_0yydo3f">
+        <di:waypoint x="825" y="500" />
+        <di:waypoint x="892" y="500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gdojig_di" bpmnElement="Flow_1gdojig">
+        <di:waypoint x="690" y="260" />
+        <di:waypoint x="800" y="260" />
+        <di:waypoint x="800" y="475" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_18h1k9n_di" bpmnElement="Flow_18h1k9n">
+        <di:waypoint x="690" y="140" />
+        <di:waypoint x="800" y="140" />
+        <di:waypoint x="800" y="475" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1qiclew_di" bpmnElement="Flow_1qiclew">
+        <di:waypoint x="500" y="475" />
+        <di:waypoint x="500" y="260" />
+        <di:waypoint x="590" y="260" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0uvwq7b_di" bpmnElement="Flow_0uvwq7b">
+        <di:waypoint x="500" y="475" />
+        <di:waypoint x="500" y="140" />
+        <di:waypoint x="590" y="140" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="509" y="453" width="13" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_0reqldm_di" bpmnElement="DataOutputAssociation_0reqldm">
+        <di:waypoint x="654" y="600" />
+        <di:waypoint x="723" y="405" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_0wjfepc_di" bpmnElement="DataOutputAssociation_0wjfepc">
+        <di:waypoint x="668" y="300" />
+        <di:waypoint x="707" y="355" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="DataOutputAssociation_0a3mt4w_di" bpmnElement="DataOutputAssociation_0a3mt4w">
+        <di:waypoint x="676" y="180" />
+        <di:waypoint x="730" y="240" />
+        <di:waypoint x="730" y="355" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

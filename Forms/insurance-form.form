@@ -1,0 +1,96 @@
+{
+  "components": [
+    {
+      "text": "# Insurance Form",
+      "type": "text",
+      "id": "Field_1c2hfz9"
+    },
+    {
+      "label": "First name",
+      "type": "textfield",
+      "id": "Field_1togg8u",
+      "key": "field_05rxme0"
+    },
+    {
+      "label": "Last name",
+      "type": "textfield",
+      "id": "Field_0mhx2uo",
+      "key": "field_0t93lrm"
+    },
+    {
+      "values": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        },
+        {
+          "label": "Diverse",
+          "value": "diverse"
+        }
+      ],
+      "label": "Sex",
+      "type": "radio",
+      "id": "Field_118h7kx",
+      "key": "field_0oe4drk"
+    },
+    {
+      "label": "Date of birth",
+      "type": "textfield",
+      "id": "Field_0o818qg",
+      "key": "field_1nljm1l",
+      "properties": {},
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Street/House number",
+      "type": "textfield",
+      "id": "Field_1ko3jh2",
+      "key": "field_1sbq0td"
+    },
+    {
+      "label": "Town/City",
+      "type": "textfield",
+      "id": "Field_00lgxeh",
+      "key": "field_19nrda8"
+    },
+    {
+      "label": "Postcode",
+      "type": "textfield",
+      "id": "Field_1a0nt59",
+      "key": "field_1vul3u8"
+    },
+    {
+      "label": "Telephone number",
+      "type": "textfield",
+      "id": "Field_00tuoqx",
+      "key": "field_0rujvd5"
+    },
+    {
+      "label": "Email adress",
+      "type": "textfield",
+      "id": "Field_0jibzca",
+      "key": "field_0lyw0y9"
+    },
+    {
+      "label": "Health Insurance name",
+      "type": "textfield",
+      "id": "Field_03r27xp",
+      "key": "field_1kqobs7"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "insurance_form",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

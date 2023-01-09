@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "text": "# Select Case",
+      "type": "text",
+      "id": "Field_0k701o4"
+    },
+    {
+      "values": [
+        {
+          "label": "Patient arrived with appointment",
+          "value": "1"
+        },
+        {
+          "label": "Patient arrived by himself",
+          "value": "2"
+        },
+        {
+          "label": "Patient arrived via abulance",
+          "value": "3"
+        }
+      ],
+      "label": "Select",
+      "type": "select",
+      "id": "Field_05klu43",
+      "key": "case",
+      "defaultValue": "2",
+      "properties": {},
+      "disabled": false
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_655344fa-bb19-471d-bc9f-6a10c80ed246",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

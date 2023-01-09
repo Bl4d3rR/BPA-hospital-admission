@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Triage" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Web Modeler" exporterVersion="b82f70e" camunda:diagramRelationId="f1a52e95-fab2-4cd8-ab9b-db7dd33a8af9" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.1.0">
+  <decision id="triage_table" name="Triage">
+    <decisionTable id="DecisionTable_1ms0d4s">
+      <input id="InputClause_06wrn1n" label="patient_condition">
+        <inputExpression id="LiteralExpression_0q8dips" typeRef="string">
+          <text>patient_condition</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_10mljpl" label="triage_case" name="triage_case" typeRef="string" />
+      <rule id="DecisionRule_04z9ael">
+        <inputEntry id="UnaryTests_1omqxqe">
+          <text>"closed fractures"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1g3vr13">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_06gz5am">
+        <inputEntry id="UnaryTests_13dji8g">
+          <text>"head trauma"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0peweom">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uyi06m">
+        <inputEntry id="UnaryTests_1bz9ffu">
+          <text>"gunshot vitals stable"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a7j04w">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0hbhy6h">
+        <inputEntry id="UnaryTests_184mdxu">
+          <text>"shock"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11ur6mi">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0qwqnhg">
+        <inputEntry id="UnaryTests_05ysa2z">
+          <text>"cardiac arrest"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_13ct5ow">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0gd1k13">
+        <inputEntry id="UnaryTests_1n24r69">
+          <text>"respiratory distress"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1t27412">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0lz2ny9">
+        <inputEntry id="UnaryTests_1fesbey">
+          <text>"imminent organ failure"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tc98yw">
+          <text>"blue"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16jy6qo">
+        <inputEntry id="UnaryTests_1slywkl">
+          <text>"lethal radiation dose"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y5wobk">
+          <text>"blue"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1q9q2ne">
+        <inputEntry id="UnaryTests_0z3355c">
+          <text>"dead"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02iaprx">
+          <text>"black"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_123fyq8" name="Maximium waiting time">
+    <decisionTable id="DecisionTable_1pfdtvo">
+      <input id="InputClause_0iqa953" label="triage_case">
+        <inputExpression id="LiteralExpression_04n94yw" typeRef="string">
+          <text>triage_case</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1eynl98" label="max_wait_time" name="max_wait_time" typeRef="string" />
+      <rule id="DecisionRule_0mj289b">
+        <inputEntry id="UnaryTests_0ymah6f">
+          <text>"green"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_052i48t">
+          <text>"PT30m"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0glyk7w">
+        <inputEntry id="UnaryTests_0c8yxdn">
+          <text>"yellow"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1njtcb5">
+          <text>"PT1h30m"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="DMNShape_0843pjy" dmnElementRef="triage_table">
+        <dc:Bounds height="80" width="180" x="190" y="240" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0it031j" dmnElementRef="Decision_123fyq8">
+        <dc:Bounds height="80" width="180" x="190" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

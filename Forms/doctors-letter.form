@@ -1,0 +1,23 @@
+{
+  "components": [
+    {
+      "text": "# Doctors Letter",
+      "type": "text",
+      "id": "Field_1ca3vul"
+    },
+    {
+      "type": "textfield",
+      "id": "Field_03ztybu",
+      "key": "doctors_letter"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_51cdb19b-3d40-4ed4-9f1c-2178ecba0614",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}

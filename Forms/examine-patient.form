@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "text": "# Examine Patient",
+      "type": "text",
+      "id": "Field_0dklr54"
+    },
+    {
+      "values": [
+        {
+          "label": "Patient can leave",
+          "value": "false"
+        },
+        {
+          "label": "Patient has to stay",
+          "value": "true"
+        }
+      ],
+      "type": "radio",
+      "id": "Field_0mb9ezq",
+      "key": "stays",
+      "disabled": false,
+      "defaultValue": "false"
+    },
+    {
+      "label": "Description",
+      "type": "textfield",
+      "id": "Field_1hjcj5z",
+      "key": "examine_description"
+    }
+  ],
+  "schemaVersion": 5,
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "b82f70e"
+  },
+  "type": "default",
+  "id": "Form_cc9a2892-b49c-40a4-8b02-d5bf8e2c3042",
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.1.0"
+}
